@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypercar Service Center</title>
+</head>
+<body>
+    <h2>Menu</h2>
+    <ul>
+        {% for service in menu_list %}
+        <li><a href="/get_ticket/{{ service.name }}" target="_self">{{ service.description }}</a></li>
+        {% endfor %}
+     </ul>
+     <a href="/processing" target="_self">Processing</a><br>
+     <a href="/next" target="_self">next</a>
+</body>
+</html>
